@@ -72,7 +72,7 @@ string challenge) {
             jsonPayload = buildJsonPayload(bookDetails,recipientId);
         }
         messages:setJsonPayload(response,jsonPayload);
-        string access_token = "EAAEcKYPrS60BALZBtwLPPjNmoctG3wR3KKRZAWME2DriZCuZBX9u5VPKtskMrpTpySeyCNNMWerGkNk0nsKOByU4jv8TavcK6z4riTcude7A0ErYLgd1PX4g3kroNtcAm5SnhDIRldM6MOvnnTeOqTICpg8ztN2HjqLnWYkLuwZDZD";
+        string access_token = ""; //This is where you provide your access key
         FBMessengerBot fbBot = create FBMessengerBot(access_token);
         message botResponse = FBMessengerBot.sendMessage(fbBot, response);
         reply botResponse;
