@@ -8,7 +8,7 @@ import ballerina.lang.jsons;
 import ballerina.lang.strings;
 import ballerina.doc;
 
-const string GOODREADS_DEV_KEY = "0EM50z4WoxaQwJgrxwLw";
+const string GOODREADS_DEV_KEY = ""; //get a goodreads access key as well
 
 @http:config { basePath: "/webhook", port: 9096}
 @doc:Description{value : "This represents ballerina helper service that talks to goodreads connector and fb messenger bot"}
@@ -72,7 +72,7 @@ string challenge) {
             jsonPayload = buildJsonPayload(bookDetails,recipientId);
         }
         messages:setJsonPayload(response,jsonPayload);
-        string access_token = ""; //This is where you provide your access key
+        string access_token = ""; //This is where you specify your access key
         FBMessengerBot fbBot = create FBMessengerBot(access_token);
         message botResponse = FBMessengerBot.sendMessage(fbBot, response);
         reply botResponse;
