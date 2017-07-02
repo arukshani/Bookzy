@@ -1,2 +1,4 @@
 # Bookzy
-Bookzy is a ballerina-fbmessenger-bot that can quickly answer your search queries regarding books. 
+Bookzy is a facebook messenger bot created using ballerina language.
+--------------------------------------------------------------------
+It can basically quickly answer your search queries regarding books. 
